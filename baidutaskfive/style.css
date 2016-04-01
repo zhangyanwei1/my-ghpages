@@ -1,0 +1,189 @@
+*{
+	margin: 0;
+	padding:0;
+}
+body{
+	background-color: #dedede;
+	font-family: "黑体";
+	font-size: 16px;
+	line-height: 24px;
+}
+#head{
+	background-color: #333;
+	height:60px;
+	width: 100%;
+}
+.logo{
+	width:120px;
+	height:40px;
+	float:left;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+.nav{margin-right: 20px;}
+.nav li{
+	height:60px;
+	font-size: 13px;
+	float:right;
+	margin-left: 30px;
+	line-height: 60px;
+}
+.nav li a{
+	text-decoration: none;
+	color:#fff;
+}
+.nav li a:hover{
+	color:#949491;
+}
+#sidebar{
+	width:366px;
+	float:right;
+	font-size:13px;
+	margin-right: 20px;
+	margin-top: 20px;
+	background-color: #fff;
+	border: 1px solid #bbb;
+	padding-bottom:20px;
+	box-shadow: 2px 2px 1px #848484;
+}
+/*右浮动，左侧自适应，总结：浮动与绝对定位*/
+.sidetitle{
+	font-size:16px;
+	padding-left:10px;
+	line-height:40px;
+	margin-left:20px;
+	margin-top:20px;
+	border-left:3px solid #ccc;
+}
+.smalltitle{
+	display:inline-block;
+	width:119px;
+	text-align:right;
+	margin-right:12px;
+}
+.tip{
+	display:block;
+	margin-left:138px;
+	color:#999;
+}
+.email{
+	margin-top:10px;
+	margin-bottom:20px;
+}
+.password1,.sex,.capital,.intrest,.discribe{
+	margin-bottom:10px;
+}
+.sex input{
+	vertical-align:middle;
+}
+.intrest input{
+	vertical-align:middle;
+}
+.password2{
+	margin-bottom:20px;
+}
+.text{
+	vertical-align:top;/*设置文本框与文字顶部对齐*/
+	width:200px;
+	height:100px;
+}
+.sub{
+	margin:0; 
+	border:none; 
+	padding:0; /*去掉submit默认边框*/
+	margin-bottom:20px;
+	display:block;
+	background:#3355d0;
+	height:36px;
+	width:320px;
+	margin:0 auto;
+	font-size:16px;
+	color:#fff;
+	line-height:36px;
+	text-align:center;
+	border-radius:8px;
+}
+#mainbody{
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 404px;
+}
+h3{
+	margin-top: 20px;
+	color:#666;
+}
+span{
+	line-height: 40px;
+	font-size: 13px;
+	color:#666;
+}
+p{                            /*注意：用CSS定义每段首行缩进2个字符，p与br*/
+	text-indent: 2em;
+}
+article{                      /*总结：CSS3阴影 box-shadow的使用*/
+	background-color: #fff;
+	border: 1px solid #bbb;
+	padding:40px 20px;
+	margin-bottom: 20px;
+	box-shadow: 2px 2px 1px #848484;
+}
+.listtwo{
+	list-style: none;
+	text-indent: 2em;
+}
+.img{
+	background-color: #fff;
+	border: 1px solid #bbb;
+	padding:40px 20px;
+	margin-bottom: 20px;
+	box-shadow: 2px 2px 1px #848484;
+}
+figure{
+	display: inline-block;
+	width:120px;
+	height: 120px;
+	border: 1px solid #bbb;
+	margin:10px 10px;
+	font-size: 13px;
+	text-align: center;
+	line-height: 30px;
+	vertical-align: middle;
+}
+ol{                              /*注意：ol默认：数字与文字距离*/
+	list-style-position: inside; /*设置对齐位置*/
+	margin-left: 26px;
+	margin-bottom: 20px;
+}
+ /*总结：CSS常用表格样式*/
+table{
+	width:100%;
+	text-align: left;
+	text-indent: 10px;
+	border-collapse: collapse;
+	font-size: 14px;
+}
+table thead{
+	background-color: #333;
+	color:#fff;	
+}
+table tfoot{
+	background-color: #ccc;
+	color:#000;
+}
+table,th,td{
+	border:1px solid #ccc;
+}
+#footer{
+	margin-top: 20px;
+	width: 100%;
+	height: 78px;
+	background: #000;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	line-height: 78px;
+}
+/*两种清除浮动地方法：
+1： clear：both；
+2： width：100%；overflow：hidden；
+放在受影响的标签中*/

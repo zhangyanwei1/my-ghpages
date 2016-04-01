@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>定位</title>
+	<style type="text/css"> 
+		*{
+			margin:0;padding:0;
+		}
+		.back{
+			width: 400px;
+			height: 200px;
+			background: #ccc;
+			position: fixed;
+			top:50%;
+			left:50%;
+			margin-left: -200px;
+			margin-top: -100px;
+			overflow: hidden;
+		}
+		.circle1{
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+			background: #fc0;
+			position: absolute;
+            left: -50px;
+            top: -50px;
+		}
+		.circle2{
+			width: 100px;
+			height: 100px;
+			border-radius: 50px;
+			background: #fc0;
+			position: absolute;
+            right: -50px;
+            bottom: -50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="back"> 
+		<div class="circle1"></div>
+		<div class="circle2"></div>
+	</div>
+</body>
+</html>

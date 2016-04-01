@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>响应式(栅格化)布局</title>
+	<style type="text/css"> 
+		*{
+			margin:0;padding:0;
+		}
+		body{
+			padding:10px;
+		}
+		[class*="col-"]{
+			float:left;
+		}
+		.content{
+			    margin:10px;
+			    background-color:#eee;
+			    border:1px solid #999;
+			    height:50px;
+		}
+		@media (min-width:768px){
+				.col-md-1{width:8.333%;}
+				.col-md-2{width:16.666%;}
+				.col-md-3{width:25%;}
+				.col-md-4{width:33.333%;}
+				.col-md-6{width:50%;}
+		}
+		@media (max-width:768px){
+				.col-sm-2{width:16.666%;}
+				.col-sm-3{width:25%;}
+				.col-sm-6{width:50%;}
+				.col-sm-8{width:66.666%;}
+				.col-sm-12{width:100%;}
+		}
+	</style>
+</head>
+
+<body>
+    <div class="col-md-4 col-sm-6"><div class="content"></div></div>
+    <div class="col-md-4 col-sm-6"><div class="content"></div></div>
+    <div class="col-md-4 col-sm-12"><div class="content"></div></div>
+    <div class="col-md-3 col-sm-3"><div class="content"></div></div>
+    <div class="col-md-6 col-sm-6"><div class="content"></div></div>
+    <div class="col-md-3 col-sm-3"><div class="content"></div></div>
+    <div class="col-md-1 col-sm-2"><div class="content"></div> </div>
+    <div class="col-md-1 col-sm-2"><div class="content"></div> </div>
+    <div class="col-md-2 col-sm-8"><div class="content"></div> </div>
+    <div class="col-md-2 col-sm-3"><div class="content"></div> </div>
+    <div class="col-md-6 col-sm-3"><div class="content"></div> </div>
+</body>
+</html>
