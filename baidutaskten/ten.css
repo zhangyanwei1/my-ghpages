@@ -1,0 +1,39 @@
+body{
+	padding: 0;
+	margin:0;
+	padding: 20px;
+}
+.flex-container{
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;/*使元素居中对齐*/
+	justify-content: space-between;/*使两边元素紧挨浏览器排布，浏览器给与一个padding值20px*/
+}
+.flex-item{
+	width: 150px;
+	border:1px solid #f00;
+	margin-bottom: 20px;
+}
+.one{
+	height: 120px;
+}
+.two{
+	height: 100px;
+}
+.three{
+	height: 40px;
+}
+.four{
+	height: 200px;
+	border-color: #00f;
+}
+@media(max-width: 640px){
+	.flex-container{
+		align-items: flex-start;/*靠近浏览器顶部对齐*/
+		flex-wrap: wrap;/*元素多行显示*/
+	}
+	.four{
+		order: -1;
+	}
+}
