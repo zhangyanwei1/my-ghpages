@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        *{
+            margin:0;padding: 0;
+        }
+        /*外层盒子*/
+        #back{           
+            height: 320px;
+            overflow: hidden;/*设置多余隐藏*/
+            margin-top: 70px;
+            position: relative;
+        }
+        /*向前*/
+        .pre{
+            position: absolute;
+            top:100px;
+            left:50px;
+            z-index: 5;
+            padding: 30px 20px;
+            /*苹果；谷歌,等一些浏览器认，因为他们都用的是webkit内核;*/
+            -webkit-border-radius: 5px;
+            /*moz这个属性 主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性;*/
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        /*向后*/
+        .next{
+            position: absolute;
+            top:100px;
+            right:50px;
+            z-index: 5;
+            padding: 30px 20px;
+            /*苹果,谷歌，等一些浏览器认，因为他们都用的是webkit内核;*/
+            -webkit-border-radius: 5px;
+            /*moz这个属性 主要是专门支持Mozilla Firefox 火狐浏览器的CSS属性;*/
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+        }
+        .pre:hover,.next:hover{
+            cursor: pointer;
+            background-color: rgba(199, 199, 199, 0.4);
+        }
+        /*图片组*/
+        .img_group{
+            /*文本不换行，使图片拼成一整张*/
+            white-space: nowrap;
+            /*使图片之间没有空格，img标签换行浏览器解析为空格，空格的大小右font-size属性决定*/
+            font-size: 0;
+            /*设置图片position属性，通过控制图片组的left属性使图片平移一张*/
+            position: absolute;  
+        }
+        /*滑动小圆点*/
+        .control{
+            position: absolute;
+            z-index: 10;
+            bottom: 20px;
+            /*小圆点水平居中对齐*/
+            left:0;
+            right: 0;
+            text-align: center;
+        }
+        .control li{
+            margin:0 3px;
+            display: inline-block; 
+            width: 12px;
+            height: 12px;
+            background-color: white;
+            opacity: 0.6;
+        }
+        .control li:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="back">
+        <!-- 向前移动 -->
+        <img src="img/left.png" class="pre">
+        <!-- 图片 -->
+        <div class="img_group">
+            <img src="img/slide_1.jpg">
+            <img src="img/slide_2.jpg">
+            <img src="img/slide_3.jpg">
+            <img src="img/slide_4.jpg">
+            <img src="img/slide_5.jpg">
+        </div>
+        <!-- 控制按钮 -->
+        <ul class="control">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <!-- 向后移动 -->
+        <img src="img/right.png" class="next">
+    </div>
+    <script type="text/javascript" src="my.js"></script>
+</body>
+</html>
