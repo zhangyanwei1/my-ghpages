@@ -26,6 +26,17 @@ function setImg(n){
     num=n;//记录当前图片是第几张
 }
 
+//滑动小圆点样式
+function current(n){
+    for(var i=0,length=btns.length;i<length;i++){
+        if(btns[i].getAttribute("data-index")==n){
+            btns[i].className="current";
+        }else{
+            btns[i].className="";
+        }
+    }
+}
+
 //图片移动动画
 function moveTo(end){
     var t0=new Date();//动画开始时间
@@ -45,12 +56,14 @@ function moveTo(end){
 }
 //自动轮播函数
 function run(){
-    setInterval(function(){
+    current(num);
+    play=setInterval(function(){
     num++;
     if(num>4){
         num=0;
     }
     setImg(num);
+    current(num);
     }, 3000);
 }
 run();
@@ -62,6 +75,7 @@ pre.onclick=function(){
         num--;
     }
     setImg(num);
+    current(num);
 }
 next.onclick=function(){
     if(num>=4){
@@ -70,11 +84,32 @@ next.onclick=function(){
         num++;
     }
     setImg(num);
+    current(num);
+}
+
+pre.onmouseover=function(){
+    clearInterval(play);
+}
+next.onmouseover=function(){
+    clearInterval(play);
+}
+pre.onmouseout=function(){
+    run();
+}
+next.onmouseout=function(){
+    run();
 }
 
 //按钮点击函数
 for(var i=0,length=btns.length;i<length;i++){
     btns[i].onclick=function(){
         setImg(this.getAttribute("data-index"));
+        current(this.getAttribute("data-index"));
+    }
+    btns[i].onmouseover=function(){
+        clearInterval(play);
+    }
+    btns[i].onmouseout=function(){
+        run();
     }
 }
