@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+}
+#back{
+    position: relative;
+    font-size: 0;
+}
+.box{
+    float: left;
+    /*每张图片之间相距10px，边距推荐使用padding，通过offsetWidth：获取盒子宽度*/
+    padding: 10px 0 0 10px;
+}
+/*瀑布流布局：
+图片每一列宽度固定，高度自适应；
+第二排第一张图片排列在第一列高度最小的地方，第二张经过重新计算的高度，继续排列在高度最小的地方。
+*/
+.box img{
+    width: 200px;
+    height: auto;
+}
+.mask{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    top:0;
+    left: 0;
+    display: none;
+}
+.display{
+    display: none;
+}
+.display img{
+    position: fixed;
+    z-index: 2;
+    top:50%;
+    left:50%;
+}
